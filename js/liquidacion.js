@@ -508,7 +508,7 @@ function muestraResultado(a){
 }
 function muestraAcuerdo(a){
     
-    $(".contribuyente").append(`${a.contribuyente}`);
+    $(".contribuyente").append(`${a.contribuyente.toUpperCase()}`);
     $("#montoLetra").append(`${a.montoLetra}`);
     $("#honoLetra").append(`${a.honoLetra}`);
     $("#monto").append(`${a.monto}`);
@@ -523,6 +523,8 @@ function muestraAcuerdo(a){
 
 function limpiarFormulario() {
     document.getElementById("formulario").reset();
+    $("#resultado").remove();
+    $(".container").append(`<div id="resultado"></div>`);
 }
 
 $("#btnLimpiar").click(function (){    
