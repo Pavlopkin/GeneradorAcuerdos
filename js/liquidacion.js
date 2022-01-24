@@ -265,7 +265,7 @@ $("#formulario").submit(function (e) {
     console.log(gastos);
     if(document.getElementById('radio3').checked){
         let cantidad = document.getElementById('selectorServicios').value;
-        servicios = 2700 *  cantidad;
+        servicios = 4000 *  cantidad;
     }else
     if(document.getElementById('radio4').checked){
         servicios = 0;
@@ -292,12 +292,7 @@ $("#formularioDos").submit(function (e) {
     e.preventDefault();
     let selectApoderado = document.getElementById('selectorApoderados').value;
     console.log(selectApoderado);
-    if(document.getElementById('radio5').checked){
-        $("#tipo").append(`<span>DNI <span>`);
-    }else
-    if(document.getElementById('radio6').checked){
-        $("#tipo").append(`<span>CUIT <span>`);
-    }
+    
     let dni = formularioDos.datos.children[5].value;
     console.log(dni);
     $("#dni").append(`<span>${dni}<span>`);
@@ -310,6 +305,12 @@ $("#formularioDos").submit(function (e) {
     let selectJuzgado = document.getElementById('juzgado').value;
     $("#juz").append(`<span>${selectJuzgado}<span>`);
     console.log("juzgado " + selectJuzgado );
+
+    if(document.getElementById('radio5').checked){
+        $("#tipo").append(`<span>DNI </span>`);
+    }if(document.getElementById('radio6').checked){
+        $("#tipo").append(`<span>CUIT </span>`);
+    }
 
     let tituloUno = formularioDos.titulos.children[8].value;
     console.log(tituloUno);
@@ -408,8 +409,8 @@ function liquidacion(a){
     let sTasa = tasa * 0.1;
     console.log(sTasa);
     let honorarios = (a.monto * a.porcentaje)/100;
-    if(honorarios < 10080){
-        honorarios = 10080;
+    if(honorarios < 10662){
+        honorarios = 10662;
     }
     console.log(honorarios);
     let aportes = honorarios *0.1;
