@@ -257,10 +257,10 @@ $("#formulario").submit(function (e) {
     let monto = formulario.gastosJuicio.children[2].value;
     console.log(monto);
     if(document.getElementById('radio1').checked){
-        gastos = 1400;
+        gastos = 1777;
     }else
     if(document.getElementById('radio2').checked){
-        gastos = 2200;
+        gastos = 3554;
     }
     console.log(gastos);
     if(document.getElementById('radio3').checked){
