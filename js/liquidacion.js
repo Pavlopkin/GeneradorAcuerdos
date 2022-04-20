@@ -409,8 +409,8 @@ function liquidacion(a){
     let sTasa = tasa * 0.1;
     console.log(sTasa);
     let honorarios = (a.monto * a.porcentaje)/100;
-    if(honorarios < 10662){
-        honorarios = 10662;
+    if(honorarios < 12528){
+        honorarios = 12528;
     }
     console.log(honorarios);
     let aportes = honorarios *0.1;
@@ -434,6 +434,7 @@ function liquidacion(a){
             this.TotalLiquidacion = this.gastosTotal + this.honorariosTotal;
             this.honoFisco = honorarios * 0.4;
             this.honoApoderado = honorarios * 0.6;
+            this.ingBrutos = honorarios * 0.035;
         }
     }
     const resultado1 = new resultado(a.contribuyente, a.juicio, a.monto, a.gastos, a.servicios, a.porcentaje, tasa, sTasa, honorarios, aportes);
@@ -505,6 +506,33 @@ function muestraResultado(a){
     <table>
     <tr><th>TOTAL GASTOS Y HONORARIOS:</th>
     <th>$ ${a.TotalLiquidacion.toFixed(2)}</th></tr>
+    </table>
+    <hr><br><br>
+    <table>
+    
+    <br>
+    <p>en proceso</p>
+    <tr><th>Honorarios :</th>
+    <th>$ ${a.honorarios.toFixed(2)}</th></tr>
+    <th>aporte 10%:</th>
+    <th>$ ${a.aportes.toFixed(2)}</th></tr>
+    <th>Ingresos Brutos:</th>
+    <th>$ ${a.ingBrutos.toFixed(2)}</th></tr>
+    <tr><th>Todal Deducciones :</th>
+    <th>$ Monto</th></tr>
+    <th>Honorario Neto</th>
+    <th>$ Monto</th></tr>
+    <th>60% estudio:</th>
+    <th>$ monto</th></tr>
+    <th>40% fisco:</th>
+    <th>$ monto</th></tr>
+    <br>
+    <tr><th>Aportes Fiscalia :</th>
+    <th>$ Monto</th></tr>
+    <th>Aportes Estudio:</th>
+    <th>$ Monto</th></tr>
+    <th>Total Aportes:</th>
+    <th>$ monto</th></tr>
     </table>`);
 }
 function muestraAcuerdo(a){
