@@ -435,6 +435,14 @@ function liquidacion(a){
             this.honoFisco = honorarios * 0.4;
             this.honoApoderado = honorarios * 0.6;
             this.ingBrutos = honorarios * 0.035;
+            this.totalDeducciones = aportes + this.ingBrutos;
+            this.honoNeto = honorarios - this.totalDeducciones;
+            this.netoEstudio = this.honoNeto * 0.6;
+            this.netoFisco = this.honoNeto * 0.4;
+            this.aporteFisco = this.netoFisco * 0.2;
+            this.aporteEstudio = (aportes * 2) - this.aporteFisco;
+            this.totalAportes = this.aporteFisco + this.aporteEstudio;
+            this.aPagar = this.tasa + this.sTasa + this.servicios + this.ingBrutos + this.netoFisco + this.totalAportes;
         }
     }
     const resultado1 = new resultado(a.contribuyente, a.juicio, a.monto, a.gastos, a.servicios, a.porcentaje, tasa, sTasa, honorarios, aportes);
@@ -487,8 +495,8 @@ function muestraResultado(a){
     <th>$ ${a.servicios.toFixed(2)}</th>
     </tr>
     <tr>
-    <th>Total costas:</th>
-    <th>$ ${a.gastosTotal.toFixed(2)}</th>
+    <th class="totales">TOTAL COSTAS:</th>
+    <th class="totales">$ ${a.gastosTotal.toFixed(2)}</th>
     </tr>
     </table>
     <hr>
@@ -499,40 +507,42 @@ function muestraResultado(a){
     <th>$ ${a.honorarios.toFixed(2)}</th></tr>
     <th>aportes s/ honorarios:</th>
     <th>$ ${a.aportes.toFixed(2)}</th></tr>
-    <th>Subtotal a cargo del deudor:</th>
-    <th>$ ${a.honorariosTotal.toFixed(2)}</th></tr>
+    <tr><th class="totales">SUBTOTAL A CARGO DEL DEUDOR:</th>
+    <th class="totales">$ ${a.honorariosTotal.toFixed(2)}</th></tr>
     </table>
     <hr>
     <table>
-    <tr><th>TOTAL GASTOS Y HONORARIOS:</th>
-    <th>$ ${a.TotalLiquidacion.toFixed(2)}</th></tr>
+    <tr><th class="totales">TOTAL GASTOS Y HONORARIOS:</th>
+    <th class="totales">$ ${a.TotalLiquidacion.toFixed(2)}</th></tr>
     </table>
     <hr><br><br>
-    <table>
+
+    <table class="extraDetail none">
     
     <br>
-    <p>en proceso</p>
     <tr><th>Honorarios :</th>
     <th>$ ${a.honorarios.toFixed(2)}</th></tr>
     <th>aporte 10%:</th>
     <th>$ ${a.aportes.toFixed(2)}</th></tr>
     <th>Ingresos Brutos:</th>
     <th>$ ${a.ingBrutos.toFixed(2)}</th></tr>
-    <tr><th>Todal Deducciones :</th>
-    <th>$ Monto</th></tr>
+    <tr><th>Total Deducciones :</th>
+    <th>$ ${a.totalDeducciones.toFixed(2)}</th></tr>
     <th>Honorario Neto</th>
-    <th>$ Monto</th></tr>
+    <th>$ ${a.honoNeto.toFixed(2)}</th></tr>
     <th>60% estudio:</th>
-    <th>$ monto</th></tr>
+    <th>$ ${a.netoEstudio.toFixed(2)}</th></tr>
     <th>40% fisco:</th>
-    <th>$ monto</th></tr>
+    <th>$ ${a.netoFisco.toFixed(2)}</th></tr>
     <br>
     <tr><th>Aportes Fiscalia :</th>
-    <th>$ Monto</th></tr>
+    <th>$ ${a.aporteFisco.toFixed(2)}</th></tr>
     <th>Aportes Estudio:</th>
-    <th>$ Monto</th></tr>
+    <th>$ ${a.aporteEstudio.toFixed(2)}</th></tr>
     <th>Total Aportes:</th>
-    <th>$ monto</th></tr>
+    <th>$ ${a.totalAportes.toFixed(2)}</th></tr>
+    <tr><th>A pagar: </th>
+    <th>$ ${a.aPagar.toFixed(2)}</th></tr>
     </table>`);
 }
 function muestraAcuerdo(a){
@@ -572,4 +582,8 @@ function limpiarFormularioDos() {
 
 $("#btnLimpiarDos").click(function (){    
     limpiarFormularioDos();  
+});
+
+$("#btnVer").click(function (){   
+    $(".extraDetail").toggle("slow");
 });

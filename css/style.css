@@ -99,7 +99,8 @@ button:hover {
     #resultado table th {
       width: 250px;
       padding: 5px;
-      text-align: left; }
+      text-align: left;
+      font-weight: 300; }
   #resultado #fechaLiq {
     margin-top: 50px; }
 
@@ -115,3 +116,6 @@ button:hover {
 
 .none {
   display: none; }
+#resultado .totales{
+  font-weight: 800;
+}
