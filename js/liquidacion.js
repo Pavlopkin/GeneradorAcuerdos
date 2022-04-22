@@ -476,7 +476,7 @@ function muestraResultado(a){
     <table>
     <tr>
     <th>Capital:</th>
-    <th>$ ${a.monto}</th>
+    <th class="number">$ ${a.monto}</th>
     </tr>
     <tr>
     <th>Tasa de Justicia:</th>
@@ -515,34 +515,33 @@ function muestraResultado(a){
     <tr><th class="totales">TOTAL GASTOS Y HONORARIOS:</th>
     <th class="totales">$ ${a.TotalLiquidacion.toFixed(2)}</th></tr>
     </table>
-    <hr><br><br>
-
+    <hr>
     <table class="extraDetail none">
-    
-    <br>
+    <tr><th class="totales">DETALLE ESTUDIO<th/><tr/>
     <tr><th>Honorarios :</th>
     <th>$ ${a.honorarios.toFixed(2)}</th></tr>
     <th>aporte 10%:</th>
     <th>$ ${a.aportes.toFixed(2)}</th></tr>
     <th>Ingresos Brutos:</th>
     <th>$ ${a.ingBrutos.toFixed(2)}</th></tr>
-    <tr><th>Total Deducciones :</th>
-    <th>$ ${a.totalDeducciones.toFixed(2)}</th></tr>
+    <tr><th class="totales">Total Deducciones :</th>
+    <th class="totales">$ ${a.totalDeducciones.toFixed(2)}</th></tr>
     <th>Honorario Neto</th>
     <th>$ ${a.honoNeto.toFixed(2)}</th></tr>
     <th>60% estudio:</th>
     <th>$ ${a.netoEstudio.toFixed(2)}</th></tr>
     <th>40% fisco:</th>
     <th>$ ${a.netoFisco.toFixed(2)}</th></tr>
-    <br>
+    <tr><th colspan="2">....................................................................................................
+    </th></tr>
     <tr><th>Aportes Fiscalia :</th>
     <th>$ ${a.aporteFisco.toFixed(2)}</th></tr>
     <th>Aportes Estudio:</th>
     <th>$ ${a.aporteEstudio.toFixed(2)}</th></tr>
-    <th>Total Aportes:</th>
-    <th>$ ${a.totalAportes.toFixed(2)}</th></tr>
-    <tr><th>A pagar: </th>
-    <th>$ ${a.aPagar.toFixed(2)}</th></tr>
+    <th class="totales">Total Aportes:</th>
+    <th class="totales">$ ${a.totalAportes.toFixed(2)}</th></tr>
+    <tr><th class="totales">A pagar: </th>
+    <th class="totales">$ ${a.aPagar.toFixed(2)}</th></tr>
     </table>`);
 }
 function muestraAcuerdo(a){
@@ -585,5 +584,13 @@ $("#btnLimpiarDos").click(function (){
 });
 
 $("#btnVer").click(function (){   
-    $(".extraDetail").toggle("slow");
+    $(".extraDetail").fadeIn("fast");
+    $("#btnVer").hide();
+    $("#btnOcultar").show();
+});
+
+$("#btnOcultar").click(function (){   
+    $(".extraDetail").fadeOut("fast");
+    $("#btnOcultar").hide();
+    $("#btnVer").show();
 });

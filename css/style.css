@@ -89,7 +89,7 @@ button:hover {
 #resultado {
   margin: 15px auto;
   text-align: center;
-  width: 600px;
+  width: auto;
   text-align: center;
   border: solid 1px black;
   padding: 10px;
@@ -97,7 +97,7 @@ button:hover {
   #resultado table {
     margin: auto; }
     #resultado table th {
-      width: 250px;
+      width: 350px;
       padding: 5px;
       text-align: left;
       font-weight: 300; }
