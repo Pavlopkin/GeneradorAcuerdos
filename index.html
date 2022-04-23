@@ -14,13 +14,13 @@
         <form id="formulario" class="form">
             <fieldset id="caso">
                 <label for="contribuyente">Apellido y nombre del contribuyente</label><br>
-                <input type="text" name="contribuyente"><br>
+                <input class="imputSize" type="text" name="contribuyente"><br>
                 <label for="juicio">Número de juicio</label><br>
-                <input type="text" name="juicio">
+                <input type="text" name="juicio" class="imputSize">
             </fieldset>
             <fieldset id="gastosJuicio">
                 <label for="monto">Monto</label><br>
-                <input type="number" min="0" max="999999999999999999" step="0.01" name="monto" class="numeros"><br>
+                <input class="imputSize" type="number" min="0" max="999999999999999999" step="0.01" name="monto" class="numeros"><br>
                 <label for="gastos">Gastos</label><br>
                 <input type="radio" id="radio1" name="gastos" value="1400"> $ 1777
                 <input type="radio" id="radio2" name="gastos" value="2200"> $ 3554
@@ -66,12 +66,12 @@
                 <input type="radio" id="radio5" name="identificacion" value="dni"> DNI
                 <input type="radio" id="radio6" name="identificacion" value="cuit"> CUIT
                 <br>
-                <input type="text" name="dni" id="dniForm"><br>
+                <input type="text" name="dni" id="dniForm" class="imputSize"><br>
                 <br>
                 <label for="domicilio">Domicilio</label><br>
-                <input type="text" name="domicilio"><br>
+                <input type="text" name="domicilio" class="imputSize"><br>
                 <label for="expediente">Expediente</label><br>
-                <input type="text" name="expediente"><br>
+                <input type="text" name="expediente" class="imputSize"><br>
                 <label for="apoderado">Juzgado</label><br>
                 <select id="juzgado" name="juzgado">
                     <option value="1">1</option>
@@ -86,7 +86,7 @@
                 <input type="radio" id="radio10" name="identificacion" value="4"> 4
                 <input type="radio" id="radio11" name="identificacion" value="5"> 5
                 <input type="radio" id="radio12" name="identificacion" value="6"> 6
-                <input type="text" class="none" name="tituloUno" id="tituloUno"><br>
+                <br><input type="text" class="none" name="tituloUno" id="tituloUno"><br>
                 <input type="text" class="none" name="tituloDos" id="tituloDos"><br>
                 <input type="text" class="none" name="tituloTres" id="tituloTres"><br>
                 <input type="text" class="none" name="tituloCuatro" id="tituloCuatro"><br>

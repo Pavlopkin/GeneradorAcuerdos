@@ -11,38 +11,53 @@
 
 body {
   width: 100%;
-  background-color: white; }
+  height: auto;
+  min-height: 850px;
+  background-image: url(../assets/fondo.jpg);
+  background-size: cover;}
 
 .container {
   width: 100%;
+  height: auto;
+  min-height: 700px;
   margin: auto;
   display: flex;
-  justify-content: center; }
-
+  justify-content: center; 
+  padding: 10px;
+  box-sizing: border-box;
+}
 form {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   background-color: #00aeff;
-  width: 500px;
+  width: 700px;
   margin: 30px auto;
-  border-radius: 25%;
-  padding: 15px; }
+  border-radius: 15%;
+  padding: 15px; 
+  box-shadow: -2px 0px 35px 10px rgba(47,196,250,1);
+  box-sizing: border-box;
+  }
   form fieldset {
-    background-color: #effcde;
+    background-color: #a3c0e0;
     border: none;
-    border-radius: 20%;
+    border-radius: 15%;
     margin: 10px auto;
     text-align: center;
     padding: 10px;
     min-width: 100px;
-    width: 70%;
+    width: 75%;
     height: auto; }
     form fieldset label {
       color: black; }
     form fieldset input {
       margin-top: 5px;
+      height: 25px;
+      border: solid rgb(1, 1, 71) 1.5px;
       margin-bottom: 20px; }
+    form fieldset .imputSize {
+      width: 80%;
+    }
     form fieldset select {
       font-size: 15px; }
 
@@ -71,7 +86,11 @@ button:hover {
   width: 88%;
   font-size: 12px;
   display: none;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  padding: 30px;  
+  box-shadow: -2px 0px 35px 10px rgba(47,196,250,1);
+  box-sizing: border-box;}
   #acuerdo p {
     text-align: justify; }
   #acuerdo h2 {
@@ -91,13 +110,16 @@ button:hover {
   text-align: center;
   width: auto;
   text-align: center;
-  border: solid 1px black;
+  border: solid 3px black;
   padding: 10px;
-  display: none; }
+  display: none;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: -2px 0px 35px 10px rgba(47,196,250,1); }
   #resultado table {
     margin: auto; }
     #resultado table th {
-      width: 350px;
+      width: 300px;
       padding: 5px;
       text-align: left;
       font-weight: 300; }

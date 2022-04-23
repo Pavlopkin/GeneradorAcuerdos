@@ -188,7 +188,6 @@ function meses(){
     let mesTexto = "";
 
     let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    console.log(date);
     switch (mes){
         case 1:
             mesTexto = "enero";
@@ -227,7 +226,7 @@ function meses(){
             mesTexto = "diciembre";
         break;
     }
-    console.log(mesTexto);
+
     
     $("#dia").append(`${dia}`);
     $("#mes").append(`${mesTexto}`);
@@ -250,19 +249,15 @@ $("#formulario").submit(function (e) {
     let servicios = 0;
     /*-----------------toma datos de inputs------------------*/
     let contribuyente = formulario.caso.children[2].value;
-    console.log(contribuyente);
     let juicio = formulario.caso.children[6].value;
     $("#juicio").append(`${juicio}`);
-    console.log(juicio);
     let monto = formulario.gastosJuicio.children[2].value;
-    console.log(monto);
     if(document.getElementById('radio1').checked){
         gastos = 1777;
     }else
     if(document.getElementById('radio2').checked){
         gastos = 3554;
     }
-    console.log(gastos);
     if(document.getElementById('radio3').checked){
         let cantidad = document.getElementById('selectorServicios').value;
         servicios = 4000 *  cantidad;
@@ -270,9 +265,7 @@ $("#formulario").submit(function (e) {
     if(document.getElementById('radio4').checked){
         servicios = 0;
     }
-    console.log(servicios);
     let porcentaje = document.getElementById('selectorHono').value;
-    console.log(porcentaje);
     class valoresIngresados {
         constructor(contribuyente, juicio, monto, gastos, servicios, porcentaje){
             this.contribuyente = contribuyente;
@@ -285,26 +278,20 @@ $("#formulario").submit(function (e) {
     }
     const valoresIngresados1 = new valoresIngresados(contribuyente, juicio, monto, gastos, servicios, porcentaje);
     liquidacion(valoresIngresados1);
-    console.log(valoresIngresados1.gastos)
 });
 
 $("#formularioDos").submit(function (e) {
     e.preventDefault();
     let selectApoderado = document.getElementById('selectorApoderados').value;
-    console.log(selectApoderado);
     
     let dni = formularioDos.datos.children[5].value;
-    console.log(dni);
     $("#dni").append(`<span>${dni}<span>`);
     let domicilio = formularioDos.datos.children[10].value;
-    console.log(domicilio);
     $("#domicilio").append(`<span>${domicilio}<span>`);
     let expediente = formularioDos.datos.children[14].value;
-    console.log(expediente);
     $("#expediente").append(`<span>${expediente}<span>`);
     let selectJuzgado = document.getElementById('juzgado').value;
     $("#juz").append(`<span>${selectJuzgado}<span>`);
-    console.log("juzgado " + selectJuzgado );
 
     if(document.getElementById('radio5').checked){
         $("#tipo").append(`<span>DNI </span>`);
@@ -313,17 +300,11 @@ $("#formularioDos").submit(function (e) {
     }
 
     let tituloUno = formularioDos.titulos.children[8].value;
-    console.log(tituloUno);
     let tituloDos = formularioDos.titulos.children[10].value;
-    console.log(tituloDos);
     let tituloTres = formularioDos.titulos.children[12].value;
-    console.log(tituloTres);
     let tituloCuatro = formularioDos.titulos.children[14].value;
-    console.log(tituloCuatro);
     let tituloCinco = formularioDos.titulos.children[16].value;
-    console.log(tituloCinco);
     let tituloSeis = formularioDos.titulos.children[18].value;
-    console.log(tituloSeis);
 
 
     if(document.getElementById('radio7').checked){
@@ -405,16 +386,12 @@ $("#radio12").click(function (){
 
 function liquidacion(a){
     let tasa = a.monto * 0.022;
-    console.log(tasa);
     let sTasa = tasa * 0.1;
-    console.log(sTasa);
     let honorarios = (a.monto * a.porcentaje)/100;
     if(honorarios < 12528){
         honorarios = 12528;
     }
-    console.log(honorarios);
     let aportes = honorarios *0.1;
-    console.log(aportes);
     class resultado {
         constructor(contribuyente, juicio, monto, gastos, servicios, porcentaje, tasa, sTasa, honorarios, aportes){
             this.contribuyente = contribuyente;
@@ -448,21 +425,19 @@ function liquidacion(a){
     const resultado1 = new resultado(a.contribuyente, a.juicio, a.monto, a.gastos, a.servicios, a.porcentaje, tasa, sTasa, honorarios, aportes);
     muestraResultado(resultado1);
     muestraAcuerdo(resultado1);
-    console.log(resultado1.honoLetra);
-    console.log("resultado gastos" + resultado1.gastos)
 }
 $("#btnEnviar").click(function (){  
     $("#formulario").hide();  
-    $("#resultado").fadeIn(2000);
+    $("#resultado").fadeIn(700);
 });
 $("#btnAcuerdo").click(function (){  
     $("#resultado").hide();  
-    $("#formularioDos").fadeIn(2000);
+    $("#formularioDos").fadeIn(700);
 });
 
 $("#btnHacerAcuerdo").click(function (){  
     $("#formularioDos").hide();  
-    $("#acuerdo").fadeIn(2000);
+    $("#acuerdo").fadeIn(700);
 });
 
 
