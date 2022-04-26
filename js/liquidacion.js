@@ -299,12 +299,12 @@ $("#formularioDos").submit(function (e) {
         $("#tipo").append(`<span>CUIT </span>`);
     }
 
-    let tituloUno = formularioDos.titulos.children[8].value;
-    let tituloDos = formularioDos.titulos.children[10].value;
-    let tituloTres = formularioDos.titulos.children[12].value;
-    let tituloCuatro = formularioDos.titulos.children[14].value;
-    let tituloCinco = formularioDos.titulos.children[16].value;
-    let tituloSeis = formularioDos.titulos.children[18].value;
+    let tituloUno = formularioDos.titulos.children[9].value;
+    let tituloDos = formularioDos.titulos.children[11].value;
+    let tituloTres = formularioDos.titulos.children[13].value;
+    let tituloCuatro = formularioDos.titulos.children[15].value;
+    let tituloCinco = formularioDos.titulos.children[17].value;
+    let tituloSeis = formularioDos.titulos.children[19].value;
 
 
     if(document.getElementById('radio7').checked){
