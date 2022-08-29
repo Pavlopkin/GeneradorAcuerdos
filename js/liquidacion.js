@@ -450,7 +450,7 @@ function muestraResultado(a){
     <hr>   
     <table>
     <tr>
-    <th>Capital:</th>
+    <th>Deuda ARBA :</th>
     <th class="number">$ ${a.monto}</th>
     </tr>
     <tr>
