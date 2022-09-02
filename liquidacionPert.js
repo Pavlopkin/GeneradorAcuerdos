@@ -266,17 +266,19 @@ $("#formulario").submit(function (e) {
         servicios = 0;
     }
     let porcentaje = document.getElementById('selectorHono').value;
+    let porcentajePert = document.getElementById('selectorHonoPert').value;
     class valoresIngresados {
-        constructor(contribuyente, juicio, monto, gastos, servicios, porcentaje){
+        constructor(contribuyente, juicio, monto, gastos, servicios, porcentaje, porcentajePert){
             this.contribuyente = contribuyente;
             this.juicio = juicio;
             this.monto = monto;
             this.gastos = gastos, 
             this.servicios = servicios;
             this.porcentaje = porcentaje; 
+            this.porcentajePert = porcentajePert;
         }
     }
-    const valoresIngresados1 = new valoresIngresados(contribuyente, juicio, monto, gastos, servicios, porcentaje);
+    const valoresIngresados1 = new valoresIngresados(contribuyente, juicio, monto, gastos, servicios, porcentaje, porcentajePert);
     liquidacion(valoresIngresados1);
 });
 

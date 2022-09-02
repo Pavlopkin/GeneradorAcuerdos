@@ -22,8 +22,8 @@
                 <label for="monto">Monto</label><br>
                 <input class="imputSize" type="number" min="0" max="999999999999999999" step="0.01" name="monto" class="numeros"><br>
                 <label for="gastos">Gastos</label><br>
-                <input type="radio" id="radio1" name="gastos" value="5425"> $ 2712
-                <input type="radio" id="radio2" name="gastos" value="2712"> $ 5425
+                <input type="radio" id="radio1" name="gastos" value="1400"> $ 2448
+                <input type="radio" id="radio2" name="gastos" value="2200"> $ 4897
             </fieldset>
             <fieldset>
                 <label for="servicios">Servicios Registrales</label><br>
@@ -38,13 +38,21 @@
                 </select>
             </fieldset>
             <fieldset id="honorarios">
-                <label for="porcentaje">porcentaje de honorarios</label><br>
+                <label for="porcentaje">Honorarios Natalia (%)</label>
                 <select id="selectorHono" name="honorarios">
-                    <option value="6" selected>6</option>
-                    <option value="9">9</option>
-                    <option value="12">12</option>
-                    <option value="15">15</option>
-                    <option value="18">18</option>
+                    <option value="6" selected>3</option>
+                    <option value="9">4.5</option>
+                    <option value="12">6</option>
+                    <option value="15">7.5</option>
+                    <option value="18">9</option>
+                </select>
+                <label for="porcentajePert">Honorarios Pertini (%)</label>
+                <select id="selectorHonoPert" name="honorariosPert">
+                    <option value="6" selected>3</option>
+                    <option value="9">4.5</option>
+                    <option value="12">6</option>
+                    <option value="15">7.5</option>
+                    <option value="18">9</option>
                 </select>
             </fieldset>
             
@@ -130,4 +138,3 @@
     <script src="./js/liquidacion.js"></script>
 </body>
 </html>
-
