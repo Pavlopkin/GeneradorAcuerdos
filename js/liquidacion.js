@@ -388,8 +388,8 @@ function liquidacion(a){
     let tasa = a.monto * 0.022;
     let sTasa = tasa * 0.1;
     let honorarios = (a.monto * a.porcentaje)/100;
-    if(honorarios < 25578){
-        honorarios = 25578;
+    if(honorarios < 25587){
+        honorarios = 25587;
     }
     let aportes = honorarios *0.1;
     class resultado {
