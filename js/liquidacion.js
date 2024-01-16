@@ -260,7 +260,7 @@ $("#formulario").submit(function (e) {
     }
     if(document.getElementById('radio3').checked){
         let cantidad = document.getElementById('selectorServicios').value;
-        servicios = 7400 *  cantidad;
+        servicios = 26000 *  cantidad;
     }else
     if(document.getElementById('radio4').checked){
         servicios = 0;
