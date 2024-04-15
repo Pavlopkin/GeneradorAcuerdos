@@ -253,10 +253,10 @@ $("#formulario").submit(function (e) {
     $("#juicio").append(`${juicio}`);
     let monto = formulario.gastosJuicio.children[2].value;
     if(document.getElementById('radio1').checked){
-        gastos = 11571;
+        gastos = 12786;
     }else
     if(document.getElementById('radio2').checked){
-        gastos = 23143;
+        gastos = 25571;
     }
     if(document.getElementById('radio3').checked){
         let cantidad = document.getElementById('selectorServicios').value;
@@ -388,8 +388,8 @@ function liquidacion(a){
     let tasa = a.monto * 0.022;
     let sTasa = tasa * 0.1;
     let honorarios = (a.monto * a.porcentaje)/100;
-    if(honorarios < 69429){
-        honorarios = 69429;
+    if(honorarios < 76713){
+        honorarios = 76713;
     }
     let aportes = honorarios *0.1;
     class resultado {
