@@ -30,7 +30,7 @@ form {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  background-color: #00aeff;
+  background-color: #4be3c2;
   width: 700px;
   margin: 30px auto;
   border-radius: 15%;
@@ -39,7 +39,7 @@ form {
   box-sizing: border-box;
   }
   form fieldset {
-    background-color: #a3c0e0;
+    background-color: #f2d5a7;
     border: none;
     border-radius: 15%;
     margin: 10px auto;
