@@ -13,7 +13,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 850px;
-  background-color: #905010;
+  background-color: #f7d9c8;
   background-size: cover;}
 
 .container {
@@ -30,7 +30,7 @@ form {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  background-color: #4be3c2;
+  background-color: #faf6d4;
   width: 700px;
   margin: 30px auto;
   border-radius: 15%;
