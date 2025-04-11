@@ -13,7 +13,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 850px;
-  background-color: #f7d9c8;
+  background-color: #faf7f0;
   background-size: cover;}
 
 .container {
@@ -114,7 +114,7 @@ button:hover {
   display: none;
   box-sizing: border-box;
   background-color: white;
-  box-shadow: -2px 0px 35px 10px rgba(47,196,250,1); }
+  box-shadow: -2px 0px 35px 10px #ed4556; }
   #resultado table {
     margin: auto; }
     #resultado table th {
