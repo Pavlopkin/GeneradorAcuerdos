@@ -64,12 +64,12 @@ form {
 button {
   margin: 15px;
   padding: 10px;
-  background-color: #0021b6;
+  background-color: #f26c3f;
   border-radius: 10%;
   font-weight: 800;
   width: 150px;
   border: none;
-  box-shadow: #2a1cec -1px 2px 2px;
+  box-shadow: #75040f -1px 2px 2px;
   color: white;
   cursor: pointer; }
 
