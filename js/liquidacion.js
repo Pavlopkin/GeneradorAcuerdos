@@ -386,7 +386,7 @@ $("#radio12").click(function (){
 
 function liquidacion(a){
     let tasa = a.monto * 0.022;
-    let sTasa = tasa * 0.1;
+    let sTasa = tasa * 0.05;
     let honorarios = (a.monto * a.porcentaje)/100;
     if(honorarios < 132990){
         honorarios = 132990;
